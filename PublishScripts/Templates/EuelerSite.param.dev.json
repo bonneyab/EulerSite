@@ -1,0 +1,29 @@
+{
+  "siteName": {
+    "value": "EuelerSite"
+  },
+  "hostingPlanName": {
+    "value": "EulerSiteServicePlan"
+  },
+  "siteLocation": {
+    "value": "West US"
+  },
+  "sku": {
+    "value": "Free"
+  },
+  "workerSize": {
+    "value": "0"
+  },
+  "siteMode": {
+    "value": "Limited"
+  },
+  "computeMode": {
+    "value": "0"
+  },
+  "subscriptionId": {
+    "value": "c109861a-2415-45f7-a3d5-d1217d7233e8"
+  },
+  "resourceGroup": {
+    "value": "EulerSiteResources"
+  }
+}
