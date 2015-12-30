@@ -16,6 +16,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PublishScripts", "PublishSc
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{8687357F-8C9B-4082-AAA4-DE2408A753A4}"
 	ProjectSection(SolutionItems) = preProject
+		PublishScripts\Scripts\Deploy-AzureResourceGroup-2.ps1 = PublishScripts\Scripts\Deploy-AzureResourceGroup-2.ps1
 		PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1 = PublishScripts\Scripts\Deploy-AzureResourceGroup.ps1
 	EndProjectSection
 EndProject
@@ -23,9 +24,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Templates", "Templates", "{
 	ProjectSection(SolutionItems) = preProject
 		PublishScripts\Templates\EuelerSite.json = PublishScripts\Templates\EuelerSite.json
 		PublishScripts\Templates\EuelerSite.param.dev.json = PublishScripts\Templates\EuelerSite.param.dev.json
+		PublishScripts\Templates\ProblemSite.json = PublishScripts\Templates\ProblemSite.json
+		PublishScripts\Templates\ProblemSite.param.dev.json = PublishScripts\Templates\ProblemSite.param.dev.json
 	EndProjectSection
 EndProject
 Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Contract", "src\Contract\Contract.xproj", "{BC146E99-D91D-4DA3-93A9-8E08E9A65AE8}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "ProblemTests", "src\ProblemTests\ProblemTests.xproj", "{E5FE86F2-AC16-4691-8299-F8EBED1862E4}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Problems", "src\Problems\Problems.xproj", "{9AF7D0DD-2050-408C-AAA9-85C2E4573A36}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,6 +68,30 @@ Global
 		{BC146E99-D91D-4DA3-93A9-8E08E9A65AE8}.stage|Any CPU.Build.0 = Debug|Any CPU
 		{BC146E99-D91D-4DA3-93A9-8E08E9A65AE8}.test|Any CPU.ActiveCfg = Debug|Any CPU
 		{BC146E99-D91D-4DA3-93A9-8E08E9A65AE8}.test|Any CPU.Build.0 = Debug|Any CPU
+		{E5FE86F2-AC16-4691-8299-F8EBED1862E4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5FE86F2-AC16-4691-8299-F8EBED1862E4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5FE86F2-AC16-4691-8299-F8EBED1862E4}.dev|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5FE86F2-AC16-4691-8299-F8EBED1862E4}.dev|Any CPU.Build.0 = Debug|Any CPU
+		{E5FE86F2-AC16-4691-8299-F8EBED1862E4}.prod|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5FE86F2-AC16-4691-8299-F8EBED1862E4}.prod|Any CPU.Build.0 = Debug|Any CPU
+		{E5FE86F2-AC16-4691-8299-F8EBED1862E4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5FE86F2-AC16-4691-8299-F8EBED1862E4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E5FE86F2-AC16-4691-8299-F8EBED1862E4}.stage|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5FE86F2-AC16-4691-8299-F8EBED1862E4}.stage|Any CPU.Build.0 = Debug|Any CPU
+		{E5FE86F2-AC16-4691-8299-F8EBED1862E4}.test|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5FE86F2-AC16-4691-8299-F8EBED1862E4}.test|Any CPU.Build.0 = Debug|Any CPU
+		{9AF7D0DD-2050-408C-AAA9-85C2E4573A36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AF7D0DD-2050-408C-AAA9-85C2E4573A36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AF7D0DD-2050-408C-AAA9-85C2E4573A36}.dev|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AF7D0DD-2050-408C-AAA9-85C2E4573A36}.dev|Any CPU.Build.0 = Debug|Any CPU
+		{9AF7D0DD-2050-408C-AAA9-85C2E4573A36}.prod|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AF7D0DD-2050-408C-AAA9-85C2E4573A36}.prod|Any CPU.Build.0 = Debug|Any CPU
+		{9AF7D0DD-2050-408C-AAA9-85C2E4573A36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AF7D0DD-2050-408C-AAA9-85C2E4573A36}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AF7D0DD-2050-408C-AAA9-85C2E4573A36}.stage|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AF7D0DD-2050-408C-AAA9-85C2E4573A36}.stage|Any CPU.Build.0 = Debug|Any CPU
+		{9AF7D0DD-2050-408C-AAA9-85C2E4573A36}.test|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AF7D0DD-2050-408C-AAA9-85C2E4573A36}.test|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -70,5 +101,7 @@ Global
 		{8687357F-8C9B-4082-AAA4-DE2408A753A4} = {7395B270-A915-4995-8C95-7ABA8979A76F}
 		{C9266CA0-C1AC-405A-BF4A-C7E823847721} = {7395B270-A915-4995-8C95-7ABA8979A76F}
 		{BC146E99-D91D-4DA3-93A9-8E08E9A65AE8} = {3015A9DA-9155-4078-ABC0-1CD1AB3F3CFB}
+		{E5FE86F2-AC16-4691-8299-F8EBED1862E4} = {3015A9DA-9155-4078-ABC0-1CD1AB3F3CFB}
+		{9AF7D0DD-2050-408C-AAA9-85C2E4573A36} = {3015A9DA-9155-4078-ABC0-1CD1AB3F3CFB}
 	EndGlobalSection
 EndGlobal

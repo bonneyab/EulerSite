@@ -1,0 +1,32 @@
+{
+  "siteName": {
+    "value": "ProblemSite"
+  },
+  "hostingPlanName": {
+    "value": "EulerSiteServicePlan"
+  },
+  "siteLocation": {
+    "value": "West US"
+  },
+  "sku": {
+    "value": "Free"
+  },
+  "workerSize": {
+    "value": "0"
+  },
+  "serverName": {
+    "value": "problemsite"
+  },
+  "serverLocation": {
+    "value": "West US"
+  },
+  "administratorLogin": {
+    "value": "adambo"
+  },
+  "administratorLoginPassword": {
+    "value": "Didiwin3"
+  },
+  "databaseName": {
+    "value": "ProblemSite_db"
+  }
+}

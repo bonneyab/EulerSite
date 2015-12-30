@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0-*",
+  "frameworks": {
+    "net45": {
+      "wrappedProject": "../../src/EulerProblems/EulerProblems.csproj",
+      "bin": {
+        "assembly": "../../src/EulerProblems/obj/{configuration}/EulerProblems.dll",
+        "pdb": "../../src/EulerProblems/obj/{configuration}/EulerProblems.pdb"
+      }
+    }
+  }
+}

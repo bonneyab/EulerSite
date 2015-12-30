@@ -11,9 +11,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using EuelerSite.Models;
 using Microsoft.Extensions.PlatformAbstractions;
-using EuelerSite.Services;
 using System.Reflection;
-using System.Collections;
 using Autofac.Extensions.DependencyInjection;
 
 namespace EuelerSite
@@ -47,6 +45,10 @@ namespace EuelerSite
                 .AddSqlServer()
                 .AddDbContext<ApplicationDbContext>(options =>
                     options.UseSqlServer(Configuration["Data:DefaultConnection:ConnectionString"]));
+            //            ConfigurationBinder.Bind<AppSettings>(Configuration["AppSettings"]);
+            //ConfigurationBinder.Bind<AppSettings>(Configuration);
+            services.AddOptions();
+            services.Configure<AppSettings>(Configuration.GetSection("AppSettings"));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
@@ -58,7 +60,7 @@ namespace EuelerSite
 
             var assemblies = PlatformServices.Default.LibraryManager.GetLibraries()
                 .SelectMany(p => p.Assemblies)
-                .Select(a => Assembly.Load(a)).ToList();
+                .Select(Assembly.Load).ToList();
             containerBuilder.Populate(services);
             containerBuilder.RegisterAssemblyTypes(assemblies.ToArray())
                 .Where(t => t.GetInterfaces()

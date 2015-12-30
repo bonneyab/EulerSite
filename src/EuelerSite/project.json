@@ -26,7 +26,9 @@
     "Microsoft.Extensions.Logging.Debug": "1.0.0-rc1-final",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0-rc1-final",
     "Autofac": "4.0.0-rc1-177",
-    "Contract": "1.0.0-*"
+    "Contract": "1.0.0-*",
+    "ProblemTests": "1.0.0-*",
+    "Microsoft.CSharp": "4.0.0"
   },
 
   "commands": {
@@ -37,7 +39,9 @@
   "frameworks": {
     "dnxcore50": {
       "dependencies": {
-        "Autofac.Extensions.DependencyInjection": "1.0.0-*"
+        "Autofac.Extensions.DependencyInjection": "1.0.0-*",
+        "System.Net.Http": "4.0.0-*",
+        "Microsoft.AspNet.WebApi.Client": "5.2.3"
       }
     }
   },
